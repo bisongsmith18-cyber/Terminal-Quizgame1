@@ -15,7 +15,7 @@ fi
 MODE="normal"
 [[ "$1" == "practice" ]] && MODE="practice"
 if [[ "$MODE" == "normal" ]]; then
-    read -p "Enter your username: " USER
+    read -r-p "Enter your username: " USER
 fi
 mapfile -t QUESTIONS < <(shuf "$QFILE")
 TOTAL=${#QUESTIONS[@]}
@@ -37,7 +37,7 @@ for LINE in "${QUESTIONS[@]}"; do
     echo "$C"
     echo "$D"
     echo
-    read -t $TIME_LIMIT -p "Your answer (A/B/C/D/E): " INPUT
+    read -r-t $TIME_LIMIT -p "Your answer (A/B/C/D/E): " INPUT
     INPUT=${INPUT^^}
     if [[ -z "$INPUT" ]]; then
         echo -e "\n\e[31mTime's up!\e[0m Correct answer: $ANSWER"
@@ -51,7 +51,7 @@ for LINE in "${QUESTIONS[@]}"; do
         break
     fi
     while [[ ! "$INPUT" =~ ^[ABCD]$ ]]; do
-        read -p "Invalid! Enter A, B, C, D, or E: " INPUT
+        read -r-p "Invalid! Enter A, B, C, D, or E: " INPUT
         INPUT=${INPUT^^}
         [[ "$INPUT" == "E" ]] && break 2
     done
