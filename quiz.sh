@@ -37,7 +37,7 @@ for LINE in "${QUESTIONS[@]}"; do
     echo "$C"
     echo "$D"
     echo
-    read -r-t $TIME_LIMIT -p "Your answer (A/B/C/D/E): " INPUT
+    read -r -t "$TIME_LIMIT" -p "Your answer (A/B/C/D/E): " INPUT
     INPUT=${INPUT^^}
     if [[ -z "$INPUT" ]]; then
         echo -e "\n\e[31mTime's up!\e[0m Correct answer: $ANSWER"
