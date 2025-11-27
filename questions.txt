@@ -1,0 +1,15 @@
+What is the capital of France?|A) Paris|B) Rome|C) Berlin|D) Madrid|A
+2 + 2 equals?|A) 3|B) 4|C) 22|D) Thanks|B
+Who wrote Hamlet?|A) Dickens|B) Tolkien|C) Shakespeare|D) Orwell|C
+What is the largest planet?|A) Earth|B) Mars|C) Jupiter|D) Venus|C
+What does CPU stand for?|A) Central Power Unit|B) Central Processing Unit|C) Computer Personal Unit|D) Control Program Utility|B
+Which is a programming language?|A) Python|B) Cobra|C) Viper|D) Anaconda|A
+What year did WW2 end?|A) 1943|B) 1944|C) 1945|D) 1946|C
+Linux was created by?|A) Bill Gates|B) Linus Torvalds|C) Steve Jobs|D) Mark Zuckerberg|B
+Which is NOT a file type?|A) .txt|B) .jpg|C) .mp3|D) .cpu|D
+Which command lists files?|A) cd|B) rm|C) ls|D) mv|C
+What is the boiling point of water?|A) 50°C|B) 100°C|C) 75°C|D) 125°C|B
+HTML stands for?|A) Hyper Trainer Marking Language|B) Hyper Text Markup Language|C) High Text Machine Language|D) Home Tool Markup Language|B
+Which one is a database?|A) MySQL|B) HTML|C) CSS|D) JS|A
+What symbol starts a comment in Bash?|A) //|B) <!--|C) #|D) --|C
+Which company made Linux famous?|A) Apple|B) IBM|C) Microsoft|D) Google|B
