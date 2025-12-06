@@ -8,16 +8,23 @@ if [[ "$1" == "highscores" ]]; then
     sort -t"|" -k2 -nr "$HIGHSCORES" | head -5 | awk -F"|" '{printf "%-10s %5s%%  %s  %s\n",$1,$2,$3,$4}'
     exit
 fi
-if [[ ! -s "$QFILE" ]]; then
-    echo "Error: questions.txt missing or empty."
+if  command -v shuf >/dev/null 2>&1; then
+    SHUFFLE_CMD="shuf"
+elif command -v gshuf >/dev/null 2>&1; then
+    SHUFFLE_CMD="gshuf"
+else
+    echo "Error: neither 'shuf' nor 'gshuf' is installed."
+    echo "Install via:"
+    echo "  Linux: sudo apt install coreutils"
+    echo "  macOS: brew install coreutils"
     exit 1
 fi
 MODE="normal"
 [[ "$1" == "practice" ]] && MODE="practice"
 if [[ "$MODE" == "normal" ]]; then
-    read -r-p "Enter your username: " USER
+    read -r -p "Enter your username: " USER
 fi
-mapfile -t QUESTIONS < <(shuf "$QFILE")
+mapfile -t QUESTIONS < <("$SHUFFLE_CMD" "$QFILE")
 TOTAL=${#QUESTIONS[@]}
 CORRECT=0
 WRONG=0
